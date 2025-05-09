@@ -163,11 +163,11 @@ variable == "male_25_29" ~ "20 to 29",
 variable == "male_30_34" ~ "30 to 44",
 variable == "male_35_39" ~ "30 to 44",
 variable == "male_40_44" ~ "30 to 44",
-variable == "male_45_49" ~ "45 to 65",
-variable == "male_50_54" ~ "45 to 65",
-variable == "male_55_59" ~ "45 to 65",
-variable == "male_60_61" ~ "45 to 65",
-variable == "male_62_64" ~ "45 to 65",
+variable == "male_45_49" ~ "45 to 64",
+variable == "male_50_54" ~ "45 to 64",
+variable == "male_55_59" ~ "45 to 64",
+variable == "male_60_61" ~ "45 to 64",
+variable == "male_62_64" ~ "45 to 64",
 variable == "male_65_66" ~ "65 and over",
 variable == "male_67_69" ~ "65 and over",
 variable == "male_70_74" ~ "65 and over",
@@ -183,6 +183,6 @@ acs_ages <- male_age |> left_join(female_age, by = "age") |>
   mutate(
     total_count = male_grp_count + female_grp_count,
     total_pct = total_count / sum(total_count)) |> 
-  write.csv("mont_acs_ages_2023.csv")
+  write.csv("mont_acs_ages.csv")
 
 mrace |> write.csv("mont_acs_race.csv")
