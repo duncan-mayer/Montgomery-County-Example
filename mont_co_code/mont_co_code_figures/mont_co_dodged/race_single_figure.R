@@ -26,7 +26,7 @@ acs_race <- acs_race |>
   variable == "nhpi"~"NHPI",
   variable == "native_aa" ~ "AIAN",
   variable == "latino" ~ "Hispanic/Latino"),
-  source = "acs") |> filter(is.na(race2) == FALSE) |> 
+  source = "ACS") |> filter(is.na(race2) == FALSE) |> 
   select(race2, pct_race, source) |> rename(percent = pct_race)
 head(acs_race)
 # create other category 
